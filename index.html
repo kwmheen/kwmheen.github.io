@@ -3,77 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyoungwhan Mheen's Portfolio</title>
+    <title>KyoungwhanMheen</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <header>
-        <img src="header-image.png" alt="Header Image" class="header-image">
-        <h1>Kyoungwhan Mheen 🦊🌾</h1>
-        <p><strong>Email:</strong> <a href="mailto:kwmheen@hanyang.ac.kr">kwmheen@hanyang.ac.kr</a> (Official) / <a href="mailto:kwmheen@gmail.com">kwmheen@gmail.com</a> (Personal)</p>
-        <p>Hanyang University Industry and Technology Center 204, 222 Wansimniro, Seongdong-gu, Seoul, South Korea</p>
-    </header>
 
-    <section class="bio">
-        <h2>Brief Bio</h2>
-        <p>I am a master’s student in Human-Centered Interactive Technologies Laboratory at the Graduate School of Culture Technology, KAIST under the supervision of Prof. Sang Ho Yoon. I received a B.S. in Engineering degree from Hanyang University. My research interests lie in gaze-based behavior prediction and gaze-hand multimodal interaction. I am particularly fascinated by how eye movements can be used to anticipate user intentions and enhance interactive systems. Additionally, I explore the integration of gaze tracking with hand gestures to create more intuitive and seamless human-computer interactions. Through my work, I aim to contribute to the development of technologies that bridge the gap between human cognitive processes and interactive systems, ultimately improving user experience and accessibility.</p>
-        <p>During my undergraduate studies, I worked as a Research Assistant (2022.03.~Present) under professor Youngjoon Won, and as an undergraduate researcher (2022.06.~2022.08.) at Korea Institute of Science and Technology (KIST)’s Intelligent Robotics Research Center.</p>
-    </section>
+    <div class="header">
+        <h1>kwmheen</h1>
+        <nav>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="#career">Career</a>
+        </nav>
+    </div>
 
-    <section class="profile">
-        <h2>Brief Profile</h2>
-        <ul>
-            <li><strong>Career:</strong> FORIF Design Committee (2020.09.01. ~ 2020.12.31.), President of FORIF (2021.03.01. ~ 2021.12.31.), FORIF Python Basic Study Mentor (2021.03.01. ~ 2021.06.31.), SKT AI Curriculum (2021.09.01. ~ 2021.12.31.), and more...</li>
-            <li><strong>Education:</strong> Hanyang University, Department of Information System, Cumulative GPA: 4.06/4.5, GPA (A 100-Point Scale): 95.2</li>
-            <li><strong>Foreign Language:</strong> TEPS: 343 (March 2022)</li>
-            <li><strong>Personal Project:</strong> Development of Cryptocurrency Aggregation Platform (2020.03. ~ Present), Conversion of fundamental MySQL functions to Python for seamless manipulation in Python Env. (2020.06. - 2020.12.)</li>
-        </ul>
-    </section>
+    <div class="profile-container">
+        <div class="profile-picture">
+            <img id="profile-img" src="./src/Profile_1.jpeg" alt="Profile Picture">
+            <div class="dots-container">
+                <span class="dot" onclick="changeSlide(1)"></span>
+                <span class="dot" onclick="changeSlide(2)"></span>
+                <span class="dot" onclick="changeSlide(3)"></span>
+                <span class="dot" onclick="changeSlide(4)"></span>
+                <span class="dot" onclick="changeSlide(5)"></span>
+            </div>
+        </div>
+        <div class="profile-details">
+            <h2>Kyoungwhan Mheen</h2>
+            <p>M.S. Student in <a href="https://hcitech.org/index.html">HCI Tech Lab</a> at KAIST</p>
+            <p>I am a master’s student in <a href="https://hcitech.org/index.html">Human-Centered Interactive Technologies Laboratory</a> at the <a href="https://ct.kaist.ac.kr/">Graduate School of Culture Technology, KAIST</a> under the supervision of Prof. <a href="https://sanghoy.com/">Sang ho Yoon</a>.</p>
+            <p>My research interest lie in gaze-based behavior and gaze-hand multimodal interaction. I am particularly fascinated by how eye movements can be used to anticipate user intentions and enhance interactive systems.</p>
+            <p>Contact: <a href="mailto:kwmheen@kaist.ac.kr">kwmheen@kaist.ac.kr</a></p>
+        </div>
+    </div>
+    <hr class="divider">
+    <div class="content">
+        <h2 id="education">Education</h2>
+        <div class="education-item">
+            <div class="education-image">
+                <img src="./src/hyu_logo.png" alt="Education Image 1">
+            </div>
+            <div class="education-text">
+                <h3>Hanyang University</h3>
+                <p><strong><span class="education-period">2020 - 2023</span></strong></p>
+                <p>Information Systems B.S.<br>G.P.A (A 100-Point Scale) 95.2</p>
+                <p></p>
+            </div>
+        </div>
+        <div class="education-item">
+            <div class="education-image">
+                <img src="./src/kaist_logo.png" alt="Education Image 2">
+            </div>
+            <div class="education-text">
+                <h3>Korea Advanced Institute of Science and Technology</h3>
+                <p><strong><span class="education-period">2024 - Present</span></strong></p>
+                <p>Graduate School of Culture Technology M.S.</p>
+            </div>
 
-    <section class="experience">
-        <h2>Detailed Experience</h2>
-        <div class="experience-item">
-            <h3>Development of Cryptocurrency Aggregation Platform</h3>
-            <p><strong>Project Developer</strong> - March 2020 - Present, Daejeon</p>
-            <ul>
-                <li>Developed a platform to aggregate cryptocurrency data from sources such as Bybit, Binance, and domestic market information from fosskorea.</li>
-                <li>Utilized Selenium, BeautifulSoup, and various APIs for data scraping.</li>
-                <li>Employed pandas and SQLAlchemy for data analysis and storage.</li>
-                <li>Converted fundamental MySQL functions to Python for seamless manipulation within the Python environment.</li>
-            </ul>
         </div>
-        <div class="experience-item">
-            <h3>SK Telecom AI Curriculum Competition (Pharma-see)</h3>
-            <p><strong>AI developer & UI UX Designer</strong> - September - December 2021, Seoul</p>
-            <ul>
-                <li>Achieved third place by developing an application for visually impaired and elderly individuals to manage medication intake through pill recognition.</li>
-                <li>Responsible for pill image recognition and UI/UX design.</li>
-            </ul>
+    </div>
+    <hr class="divider">
+    <div class="content">
+        <h2 id="projects">Projects</h2>
+        <div class="project-item">
+            <div class="project-text">
+                <h3>What-if: Immersive fairy tale in re-imagined space</h3>
+                <p><strong><span class="project-period">Team Project of "Culture Technology" [GCT 501] (Spring, 2024; KAIST)</span></strong></p>
+                <p>The "WhatIf" project combines Generative AI and Augmented Reality (AR) to create an immersive Tabletop Role-Playing Game (TRPG). By blending physical and digital elements, the game reimagines classic tales, offering players dynamic narratives and interactive gameplay, with the freedom and creativity similar to popular strategy games like "Civilization."</p>
+            </div>
+            <div class="project-slide">
+                <img src="./src/501_Whatif_Thumbnail.jpg" alt="Education Image 2">
+                <div class="tag-container">
+                    <span class="tag">Generative AI</span>
+                    <span class="tag">TRPG</span>
+                    <span class="tag">Game</span>
+                    <span class="tag">Design</span>
+                </div>
+            </div>
         </div>
-        <div class="experience-item">
-            <h3>KIST, Intelligent Robotics Research Division</h3>
-            <p><strong>Undergraduate Research Assistant</strong> - June 2022 - August 2022, Seoul</p>
-            <ul>
-                <li>Collected and analyzed video data on back-channeling.</li>
-                <li>Utilized OpenCV and MediaPipe for video analysis, and pandas for data analysis.</li>
-            </ul>
-        </div>
-        <div class="experience-item">
-            <h3>NFT Domestic Market Comparative Analysis Project</h3>
-            <p><strong>Research Assistant for Professor Youngjoon Won</strong> - March 2023 ~ , Seoul</p>
-            <ul>
-                <li>Conducting a comparative analysis of the domestic NFT (MetaKongz) market and international NFT markets.</li>
-                <li>Applying MACD and RSI indicators to assess market speculation potential.</li>
-                <li>Analyzing network congestion and transaction activity using Gas Fees and the networkx library.</li>
-            </ul>
-        </div>
-    </section>
 
-    <footer>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:kwmheen@gmail.com">kwmheen@gmail.com</a></p>
-        <p>Phone: +82 10-9995-1051</p>
-        <p>Location: Seoul, Seongdong-gu</p>
-    </footer>
+        <div class="project-item">
+            <div class="project-text">
+                <h3>PreGraspHelper : Virtual Objects Preparatory Manipulation for Grasping</h3>
+                <p><strong><span class="project-period">Team Project of "Interaction Sensing Principle & Application" [GCT 623] (Spring, 2024; KAIST)</span></strong></p>
+                <p>PreGraspHelper is an innovative interaction concept designed for virtual reality (VR) environments, where it aids in object manipulation before grasping. By detecting a user's intent through gaze fixation on a handle, the system automatically rotates the virtual object into an optimal position for grasping.</p>
+            </div>
+            <div class="project-slide">
+                <img src="./src/GCT623_Final 52.png" alt="Education Image 2">
+                <div class="tag-container">
+                    <span class="tag">Sensing</span>
+                    <span class="tag">Interaction</span>
+                    <span class="tag">Grasping</span>
+                    <span class="tag">Gaze</span>
+                    <span class="tag">Data Anlz.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-text">
+                <h3>Worki-Yo : Improved Stretching accessibility for Office Worker Using Immersive Augment Reality</h3>
+                <p><strong><span class="project-period">Team Project of "Augmented Reality" [CTP 445] (Spring, 2024; KAIST)</span></strong></p>
+                <p>Worki-Yo is an innovative project that enhances stretching exercises for office workers through Immersive (AR). By using an intuitive avatar-based guidance system, it provides real-time feedback to improve form and maximize exercise benefits. This project aims to promote musculoskeletal, ergonomic health.</p>
+            </div>
+            <div class="project-slide">
+                <img src="./src/CTP445_Final 11.png" alt="Education Image 2">
+                <div class="tag-container">
+                    <span class="tag">Augmented Reality</span>
+                    <span class="tag">Virtual Reality</span>
+                    <span class="tag">Health</span>
+                    <span class="tag">Data Anlz.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="divider">
+    <div class="content">
+        <h2 id="career">Career</h2>
+        <div class="career-item">
+            <div class="career-text">
+                <h3>FORIF Design Committe</h3>
+                <p><strong><span class="career-period">2020.09.01. ~ 2020.12.31.</span></strong></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="career-item">
+            <div class="career-text">
+                <h3>6th President of <a href="https://forif.org/">FORIF</a> (HYU Academic Division Central SW Club)</h3>
+                <p><strong><span class="career-period">2021.03.01. ~ 2021.12.31.</span></strong></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="career-item">
+            <div class="career-text">
+                <h3>FORIF C, Python, Data Analysis, Web Crawling, LLM Study Mentor</h3>
+                <p><strong><span class="career-period">2021.03.01.~2022.12.31.</span></strong></p>
+            </div>
+        </div>
+        <div class="career-item">
+            <div class="career-text">
+                <h3>SKT AI Curriculum (3rd Place, Pharma-see)</h3>
+                <p><strong><span class="career-period">2021.12.31.</span></strong></p>
+            </div>
+        </div>
+        <div class="career-item">
+            <div class="career-text">
+                <h3>Intelligent Robotics Research Center, KIST</h3>
+                <p><strong><span class="career-period">2022.06.22. ~ 2022.08.31.</span></strong></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var currentSlide = 1;
+        var totalSlides = 5;
+
+        function changeSlide(slideIndex) {
+            currentSlide = slideIndex;
+            document.getElementById("profile-img").src = `./src/Profile_${slideIndex}.jpeg`;
+            updateDots();
+        }
+
+        function updateDots() {
+            var dots = document.getElementsByClassName("dot");
+            for (var i = 0; i < dots.length; i++) {
+                dots[i].style.backgroundColor = i === currentSlide - 1 ? "#0066FF" : "#ccc";
+            }
+        }
+
+        // Initialize the first dot as active
+        updateDots();
+    </script>
+
 </body>
 </html>
