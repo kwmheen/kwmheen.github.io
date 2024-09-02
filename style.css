@@ -354,6 +354,17 @@ body {
 
 /* 모바일 기기에서만 적용되는 스타일 */
 @media (max-width: 768px) {
+    .header {
+        background-color: #0066FF; 
+        color: white;
+        padding: 10px 20px;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        height: 100px;
+    }
+    
     .profile-container {
         max-width: 100%;
         margin: 20px auto;
