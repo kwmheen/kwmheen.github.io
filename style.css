@@ -178,8 +178,18 @@ body {
 
 .education-period {
     color: #0066FF; /* 원하는 색상으로 변경 */
+    font-weight: 500;
 }
 
+.extra-period {
+    color: #ccc; /* 원하는 색상으로 변경 */
+    font-weight: 500;
+}
+
+.extra-period1 {
+    color: #0066FF; /* 원하는 색상으로 변경 */
+    font-weight: 500;
+}
 
 .education-image {
     width: 120px;
@@ -275,6 +285,16 @@ body {
 }
 
 .career-text a:hover {
+    text-decoration: underline; /* 링크에 마우스를 올릴 때 밑줄 표시 */
+}
+
+.extra-text a {
+    color: #0066FF;
+    font-weight: bold;
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+.extra-text a:hover {
     text-decoration: underline; /* 링크에 마우스를 올릴 때 밑줄 표시 */
 }
 
@@ -452,7 +472,7 @@ body {
         padding: 20px;
     }
 
-    .education-item, .project-item, .career-item {
+    .education-item, .project-item, .career-item, .extra-item {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -473,18 +493,18 @@ body {
         object-fit: cover;
     }
 
-    .education-text, .project-text, .career-text {
+    .education-text, .project-text, .career-text, .extra-text {
         max-width: 100%;
         margin: 0 auto;
         text-align: center;
     }
 
-    .education-text h3, .project-text h3, .career-text h3 {
+    .education-text h3, .project-text h3, .career-text h3, .extra-text h3 {
         font-size: 18px;
         margin-bottom: 10px;
     }
 
-    .education-text p, .project-text p, .career-text p {
+    .education-text p, .project-text p, .career-text p, .extra-text p {
         font-size: 14px;
         margin-bottom: 10px;
     }
