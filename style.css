@@ -122,6 +122,13 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.autograph-image {
+    display: block;
+    margin: 10px 10px 10px 0; /* Removes auto-centering and aligns to the left */
+    max-width: 150px;
+    height: auto;
+}
+
 .white-href a {
     color: #ffffff;
     font-weight: bold;
