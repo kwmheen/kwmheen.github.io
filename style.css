@@ -9,8 +9,40 @@ body {
     font-family: 'Noto Serif', serif;
 }
 
-:lang(ko) {
-    font-family: 'Noto Sans KR', sans-serif; /* 한글 텍스트에 적용할 폰트 */
+/* 한글 텍스트에 대한 폰트 설정 */
+.korean-text {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 특정 weight가 필요한 경우를 위한 클래스들 */
+.noto-kr-thin {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 100;
+}
+
+.noto-kr-light {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 300;
+}
+
+.noto-kr-regular {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+}
+
+.noto-kr-medium {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 500;
+}
+
+.noto-kr-bold {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+}
+
+.noto-kr-black {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 900;
 }
 
 /* Header styling */
@@ -240,10 +272,12 @@ body {
 .project-slide img {
     background-color: #0000FF;
     width: 320px;
-    height: 180px;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
+}
+
+.with-shadow {
     box-shadow: 0px 4px 8px rgba(12, 12, 12, 0.2);
-    /* border-radius: 5px; */
 }
 
 .tag-container {
@@ -580,4 +614,41 @@ body {
         color: white;
         font-weight: 300;
     }
+}
+
+.publication-item, .prize-item {
+    border-left: 4px solid #0066FF;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f8f9fa;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.3s ease;
+}
+
+.publication-item:hover, .prize-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 4px 8px rgba(0, 102, 255, 0.1);
+}
+
+.publication-text h3, .prize-text h3 {
+    color: #0066FF;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.publication-authors, .publication-venue {
+    display: block;
+    margin: 8px 0;
+}
+
+.publication-venue {
+    color: #666;
+    font-style: italic;
+}
+
+.content h2 {
+    color: #0066FF;
+    border-bottom: 2px solid #0066FF;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
