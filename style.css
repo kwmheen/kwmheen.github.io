@@ -47,7 +47,7 @@ body {
 
 /* Header styling */
 .header {
-    background-color: #0066FF; 
+    background-color: #2a52be; 
     color: white;
     padding: 10px 20px;
     position: sticky;
@@ -118,7 +118,7 @@ body {
 }
 
 .profile-details a {
-    color: #0066FF;
+    color: #2a52be;
     font-weight: bold;
     text-decoration: none; /* 밑줄 제거 */
 }
@@ -146,7 +146,7 @@ body {
 .contact-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0066FF;
+    background-color: #2a52be;
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -210,13 +210,13 @@ body {
 }
 
 .education-text a {
-    color: #0066FF;
+    color: #2a52be;
     font-weight: bold;
     text-decoration: none; /* 밑줄 제거 */
 }
 
 .education-period {
-    color: #0066FF; /* 원하는 색상으로 변경 */
+    color: #2a52be; /* 원하는 색상으로 변경 */
     font-weight: 500;
 }
 
@@ -226,7 +226,7 @@ body {
 }
 
 .extra-period1 {
-    color: #0066FF; /* 원하는 색상으로 변경 */
+    color: #2a52be; /* 원하는 색상으로 변경 */
     font-weight: 500;
 }
 
@@ -238,7 +238,7 @@ body {
 }
 
 .education-image img {
-    background-color: #0000FF;
+    background-color: #2a52be;
     width: 100px;
     height: 100px;
     object-fit: cover;
@@ -260,7 +260,7 @@ body {
 }
 
 .project-period {
-    color: #0066FF; /* 원하는 색상으로 변경 */
+    color: #2a52be; /* 원하는 색상으로 변경 */
 }
 
 
@@ -270,7 +270,7 @@ body {
 }
 
 .project-slide img {
-    background-color: #0000FF;
+    background-color: #2a52be;
     width: 320px;
     height: auto;
     object-fit: contain;
@@ -289,7 +289,7 @@ body {
 }
 
 .tag {
-    background-color: #0066FF;
+    background-color: #2a52be;
     color: white;
     padding: 5px 10px;
     border-radius: 20px;
@@ -320,7 +320,7 @@ body {
 }
 
 .career-text a {
-    color: #0066FF;
+    color: #2a52be;
     font-weight: bold;
     text-decoration: none; /* 밑줄 제거 */
 }
@@ -330,7 +330,7 @@ body {
 }
 
 .extra-text a {
-    color: #0066FF;
+    color: #2a52be;
     font-weight: bold;
     text-decoration: none; /* 밑줄 제거 */
 }
@@ -386,7 +386,7 @@ body {
 }
 
 .contact-item a {
-    color: #0066FF;
+    color: #2a52be;
     text-decoration: none; /* 밑줄 제거 */
     font-weight: 600;
 }
@@ -397,7 +397,7 @@ body {
 
 /* Footer styling */
 .footer {
-    background-color: #0066FF;
+    background-color: #2a52be;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -416,7 +416,7 @@ body {
 /* 모바일 기기에서만 적용되는 스타일 */
 @media (max-width: 768px) {
     .header {
-        background-color: #0066FF; 
+        background-color: #2a52be; 
         color: white;
         padding: 10px 20px;
         position: sticky;
@@ -485,7 +485,7 @@ body {
     .contact-button {
         display: inline-block;
         padding: 10px 20px;
-        background-color: #0066FF;
+        background-color: #2a52be;
         color: white;
         font-weight: bold;
         text-decoration: none;
@@ -591,7 +591,7 @@ body {
     }
 
     .contact-item a {
-        color: #0066FF;
+        color: #2a52be;
         text-decoration: none;
         font-weight: 600;
     }
@@ -601,7 +601,7 @@ body {
     }
 
     .footer {
-        background-color: #0066FF;
+        background-color: #2a52be;
         color: white;
         text-align: center;
         padding: 20px 0;
@@ -617,7 +617,7 @@ body {
 }
 
 .publication-item, .prize-item {
-    border-left: 4px solid #0066FF;
+    border-left: 4px solid #2a52be;
     padding: 20px;
     margin: 20px 0;
     background-color: #f8f9fa;
@@ -627,11 +627,11 @@ body {
 
 .publication-item:hover, .prize-item:hover {
     transform: translateX(10px);
-    box-shadow: 0 4px 8px rgba(0, 102, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 102, 255, 0.1);  /* 그림자 효과 제거 */
 }
 
 .publication-text h3, .prize-text h3 {
-    color: #0066FF;
+    color: #2a52be;
     margin-bottom: 10px;
     font-size: 1.2em;
 }
@@ -647,8 +647,8 @@ body {
 }
 
 .content h2 {
-    color: #0066FF;
-    border-bottom: 2px solid #0066FF;
+    color: #2a52be;
+    border-bottom: 2px solid #2a52be;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
