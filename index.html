@@ -110,9 +110,11 @@
                 <ul class="publication-list">
                     <li class="publication-item">
                         <span class="pub-title">UniScale: Exploring Unimanual Gesture Mapping Strategies for Gaze+Pinch-based Scaling Interaction</span>
-                        <span class="pub-meta">ISMAR 2026</span>
+                        <div class="pub-meta-row">
+                            <span class="pub-meta">ISMAR 2026</span>
+                            <a href="./projects/uniscale/" class="pub-project-link" title="View project page"><i class="bi bi-box-arrow-up-right"></i> Project Page</a>
+                        </div>
                         <span class="pub-authors"><u><strong>Kyoungwhan Mheen</strong></u>, Jinwook Kim*, Sang Ho Yoon*</span>
-                  
                     </li>
                     <li class="publication-item">
                         <span class="pub-title">Automatic Preparatory Object Rotation Interaction using Gaze Data in Virtual Reality</span>
@@ -288,14 +290,43 @@
             var img = document.getElementById('profile-img');
             var defaultSrc = img.dataset.default;
             var hoverSrc = img.dataset.hover;
+            var scrollThreshold = 10;
+            var hoverMedia = window.matchMedia('(hover: hover) and (pointer: fine)');
+            var showingHover = false;
 
-            wrapper.addEventListener('mouseenter', function () {
-                img.src = hoverSrc;
-            });
+            function setHoverImage() {
+                if (!showingHover) {
+                    img.src = hoverSrc;
+                    showingHover = true;
+                }
+            }
 
-            wrapper.addEventListener('mouseleave', function () {
-                img.src = defaultSrc;
-            });
+            function setDefaultImage() {
+                if (showingHover) {
+                    img.src = defaultSrc;
+                    showingHover = false;
+                }
+            }
+
+            function onScroll() {
+                if (window.scrollY > scrollThreshold) {
+                    setHoverImage();
+                } else {
+                    setDefaultImage();
+                }
+            }
+
+            function bindInteractions() {
+                if (hoverMedia.matches) {
+                    wrapper.addEventListener('mouseenter', setHoverImage);
+                    wrapper.addEventListener('mouseleave', setDefaultImage);
+                } else {
+                    window.addEventListener('scroll', onScroll, { passive: true });
+                    onScroll();
+                }
+            }
+
+            bindInteractions();
         })();
     </script>
 
