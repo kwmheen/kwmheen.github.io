@@ -151,6 +151,7 @@ a:hover {
 
 .profile-img-wrapper {
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .profile-img-wrapper img {
@@ -159,6 +160,7 @@ a:hover {
     border-radius: var(--radius);
     object-fit: cover;
     box-shadow: var(--shadow-sm);
+    transition: opacity 0.2s ease;
 }
 
 .dots-container {
