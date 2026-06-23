@@ -3,264 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kwmheen</title>
+    <title>Kyoungwhan Mheen</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 
-    <div class="header">
-        <h1>kwmheen</h1>
-        <nav>
-            <a href="#education">Education</a>
-            <a href="#publications">Publications</a>
-            <a href="#prizes">Prizes</a>
-            <a href="#projects">Projects</a>
-            <a href="#career">Career</a>
-            <a href="#extra-curricular">Extra-Curricular</a>
-        </nav>
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="#" class="navbar-brand">Kyoungwhan Mheen</a>
+            <ul class="navbar-nav">
+                <li><a href="#news">News</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#services">Services</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-layout">
+        <aside class="sidebar">
+            <div class="profile-card">
+                <div class="profile-img-wrapper">
+                    <img id="profile-img" src="./src/Profile_1 3.png" alt="Kyoungwhan Mheen">
+                </div>
+                <h2>Kyoungwhan Mheen</h2>
+                <p class="profile-subtitle">M.S. Student</p>
+                <p class="profile-affiliation">
+                    <a href="https://hcitech.org/index.html" target="_blank" rel="noopener">HCI Tech Lab</a><br>
+                    <a href="https://ct.kaist.ac.kr/" target="_blank" rel="noopener">Graduate School of Culture Technology, KAIST</a>
+                </p>
+                <hr class="card-divider">
+                <div class="contact-info">
+                    <a href="mailto:kwmheen@kaist.ac.kr">kwmheen@kaist.ac.kr</a>
+                    NS building, 291 Daehak-ro,<br>
+                    Yuseong-gu, Daejeon,<br>
+                    Republic of Korea (34141)
+                </div>
+                <hr class="card-divider">
+                <div class="social-links">
+                    <a href="mailto:kwmheen@kaist.ac.kr" title="Email"><i class="bi bi-envelope-fill"></i></a>
+                    <a href="https://github.com/kwmheen" target="_blank" rel="noopener" title="GitHub"><i class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kyoungwhan-mheen-281361276/" target="_blank" rel="noopener" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.instagram.com/kwmheen/" target="_blank" rel="noopener" title="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <section id="about">
+                <h2 class="section-title">Biography</h2>
+                <div class="bio-text">
+                    <p>Hello, I am a master's student in <a href="https://hcitech.org/index.html" target="_blank" rel="noopener">Human-Centered Interactive Technologies Laboratory</a> at the <a href="https://ct.kaist.ac.kr/" target="_blank" rel="noopener">Graduate School of Culture Technology, KAIST</a> under the supervision of Prof. <a href="https://sanghoy.com/" target="_blank" rel="noopener">Sang Ho Yoon</a>.</p>
+                    <p>My research interests lie in gaze-based behavior and gaze-hand multimodal interaction. I am particularly fascinated by how eye movements can be used to anticipate user intentions and enhance interactive systems.</p>
+                </div>
+                <div class="research-tags">
+                    <span class="research-tag">Gaze Interaction</span>
+                    <span class="research-tag">Multimodal HCI</span>
+                    <span class="research-tag">Virtual Reality</span>
+                    <span class="research-tag">Augmented Reality</span>
+                </div>
+            </section>
+
+            <section id="news">
+                <h2 class="section-title">News</h2>
+                <ul class="news-timeline">
+                    <li class="news-item">
+                        <div class="news-date">2025</div>
+                        <div class="news-content">Received <strong>Best Presentation Award</strong> at Korea Computer Graphics Society (KCGS) 2025.</div>
+                    </li>
+                    <li class="news-item">
+                        <div class="news-date">2025</div>
+                        <div class="news-content">Two papers accepted at <strong>HCI Korea 2025</strong> — Worki-Yo and A Guidance System for Large-Scale Museum Exhibits.</div>
+                    </li>
+                    <li class="news-item">
+                        <div class="news-date">2024</div>
+                        <div class="news-content">Started M.S. program at <strong>KAIST Graduate School of Culture Technology</strong>.</div>
+                    </li>
+                    <li class="news-item">
+                        <div class="news-date">2024</div>
+                        <div class="news-content">Paper on gaze-based object rotation in VR presented at <strong>Korea Computer Congress (KCC) 2024</strong>.</div>
+                    </li>
+                    <li class="news-item">
+                        <div class="news-date">2023</div>
+                        <div class="news-content">Won <strong>3rd Place</strong> at SKT AI Curriculum with <a href="https://kwmheenhyu.notion.site/PharmaSEE-2ef8fcd094c840d0b5882295f3080181?pvs=74" target="_blank" rel="noopener">PharmaSEE</a> project.</div>
+                    </li>
+                    <li class="news-item">
+                        <div class="news-date">2021</div>
+                        <div class="news-content">Elected <strong>6th President</strong> of <a href="https://forif.org/" target="_blank" rel="noopener">FORIF</a> (HYU Academic Division Central SW Club).</div>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="publications">
+                <h2 class="section-title">Publications</h2>
+                <ul class="publication-list">
+                    <li class="publication-item">
+                        <span class="pub-title">Automatic Preparatory Object Rotation Interaction using Gaze Data in Virtual Reality</span>
+                        <span class="pub-meta">Korea Computer Congress (KCC) 2024</span>
+                        <span class="pub-authors">Kyoungwhan Mheen (KAIST), Min-yung Kim (KAIST), Jina Kim (KAIST), Sang Ho Yoon* (KAIST)</span>
+                    </li>
+                    <li class="publication-item">
+                        <span class="pub-title korean-text">Worki-Yo: AR-Driven Stretching in Office System for Workplace Health</span>
+                        <span class="pub-meta">HCI Korea 2025</span>
+                        <span class="pub-authors">Kyoungwhan Mheen, Heejeong Ko, Sungjae Choi, Sang Ho Yoon*</span>
+                    </li>
+                    <li class="publication-item">
+                        <span class="pub-title korean-text">A Guidance System for Large-Scale Museum Exhibits by Integrating Wall Displays and Augmented Reality</span>
+                        <span class="pub-meta">HCI Korea 2025</span>
+                        <span class="pub-authors">Hee Jeong Ko, Hyun Woo Kim, Kyoungwhan Mheen, Dooyoung Kim, Woontack Woo*</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="experience">
+                <h2 class="section-title">Experience</h2>
+                <ul class="experience-list">
+                    <li class="experience-item">
+                        <h3>AlphaMind <em>[Under Develop]</em></h3>
+                        <p class="meta-date">2023.01 – Present</p>
+                        <p>CEO, Frontend/Backend Developer — Crypto Aggregation &amp; Algorithm Trading (<a href="https://moneypin.biz/bizno/detail/3418802867/" target="_blank" rel="noopener">Co. MK Associates</a>)</p>
+                    </li>
+                    <li class="experience-item">
+                        <h3>Research Assistant</h3>
+                        <p class="meta-date">2023.03 – 2023.07</p>
+                        <p>Under the supervision of <a href="https://github.com/youngjoonwon" target="_blank" rel="noopener">Prof. Youngjoon Won</a> — Blockchain Application Research (NFT Transaction Analysis)</p>
+                    </li>
+                    <li class="experience-item">
+                        <h3>Intelligent Robotics Research Center, KIST</h3>
+                        <p class="meta-date">2022.06 – 2022.08</p>
+                        <p>Under the supervision of <a href="https://scholar.google.co.uk/citations?user=xlNXvLEAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Dr. Lim Yoonseob</a></p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h2 class="section-title">Research Projects</h2>
+                <div class="project-grid">
+                    <article class="project-card-concise">
+                        <div class="project-thumbnail-wrapper">
+                            <img src="./src/501_Whatif_Thumbnail.jpg" alt="What-if project" class="project-thumbnail" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <div class="card-header">
+                                <span class="proj-badge">Course Project</span>
+                                <span class="proj-date">2024 Spring</span>
+                            </div>
+                            <h3 class="proj-title">What-if: Immersive fairy tale in re-imagined space</h3>
+                            <p class="proj-meta">GCT501 Culture Technology</p>
+                            <p class="proj-desc">Kyoungwhan Mheen, Kangeun Lee, Hyungwoo Jin, Danbinaerin Han</p>
+                        </div>
+                    </article>
+                    <article class="project-card-concise">
+                        <div class="project-thumbnail-wrapper">
+                            <img src="./src/Frame 102.png" alt="PreGraspHelper project" class="project-thumbnail" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <div class="card-header">
+                                <span class="proj-badge">Course Project</span>
+                                <span class="proj-date">2024 Spring</span>
+                            </div>
+                            <h3 class="proj-title">PreGraspHelper: Virtual Objects Preparatory Manipulation for Grasping</h3>
+                            <p class="proj-meta">GCT623 Interaction Sensing Principle &amp; Application</p>
+                            <p class="proj-desc">Kyoungwhan Mheen, Min-yung Kim</p>
+                        </div>
+                    </article>
+                    <article class="project-card-concise">
+                        <div class="project-thumbnail-wrapper">
+                            <img src="./src/Frame 11.png" alt="Worki-Yo project" class="project-thumbnail" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <div class="card-header">
+                                <span class="proj-badge">Course Project</span>
+                                <span class="proj-date">2024 Spring</span>
+                            </div>
+                            <h3 class="proj-title">Worki-Yo: Improved Stretching accessibility for Office Worker Using Immersive Augmented Reality</h3>
+                            <p class="proj-meta">CTP445 Augmented Reality | KAIST</p>
+                            <p class="proj-desc">AR-driven stretching system for workplace health.</p>
+                        </div>
+                    </article>
+                    <article class="project-card-concise">
+                        <div class="project-thumbnail-wrapper">
+                            <img src="./src/HomePageTeaser.png" alt="PeeKaBoo project" class="project-thumbnail" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <div class="card-header">
+                                <span class="proj-badge">Course Project</span>
+                                <span class="proj-date">2025 Autumn</span>
+                            </div>
+                            <h3 class="proj-title">PeeKaBoo! — Personalized Emotional Evaluation Kernel Adjusted by Biofeedback-Optimized Observation</h3>
+                            <p class="proj-meta">GCT565 Augmented Humans</p>
+                            <p class="proj-desc">KwangBin Lee, Jihun Chae</p>
+                        </div>
+                    </article>
+                    <article class="project-card-concise">
+                        <div class="project-thumbnail-wrapper">
+                            <img src="./src/Flace_Teaser.png" alt="Flace project" class="project-thumbnail" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <div class="card-header">
+                                <span class="proj-badge">Course Project</span>
+                                <span class="proj-date">2025 Autumn</span>
+                            </div>
+                            <h3 class="proj-title">Flace: Framing Spaces for Seamless Collaboration in Meta-Museum</h3>
+                            <p class="proj-meta">GCT550 Augmented Reality</p>
+                            <p class="proj-desc">Hee Jeong Ko, Hyun Woo Kim</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2 class="section-title">Education</h2>
+                <ul class="education-list">
+                    <li class="education-item">
+                        <img class="education-logo" src="./src/kaist_logo.png" alt="KAIST">
+                        <div>
+                            <h3>Korea Advanced Institute of Science and Technology</h3>
+                            <p class="meta-date">2024 – Present</p>
+                            <p class="education-degree">Graduate School of Culture Technology, M.S.</p>
+                        </div>
+                    </li>
+                    <li class="education-item">
+                        <img class="education-logo" src="./src/hyu_logo.png" alt="Hanyang University">
+                        <div>
+                            <h3>Hanyang University</h3>
+                            <p class="meta-date">2020 – 2023</p>
+                            <p class="education-degree">Information Systems, B.S.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="awards">
+                <h2 class="section-title">Awards</h2>
+                <ul class="list-minimal">
+                    <li><strong>Best Presentation Award</strong> — HMD-Based Trajectory Extraction for Seated Arm Stretching Based on Linear and Angular Trajectory Classification, Korea Computer Graphics Society (KCGS) 2025</li>
+                    <li><strong>3rd Place</strong> — SKT AI Curriculum, <a href="https://kwmheenhyu.notion.site/PharmaSEE-2ef8fcd094c840d0b5882295f3080181?pvs=74" target="_blank" rel="noopener">PharmaSEE</a> (2021)</li>
+                </ul>
+            </section>
+
+            <section id="services">
+                <h2 class="section-title">Services</h2>
+
+                <div class="service-group">
+                    <h3>FORIF (HYU Academic Division Central SW Club)</h3>
+                    <ul class="list-minimal">
+                        <li><strong>6th President</strong> <span class="service-detail">2021.03 – 2021.12</span></li>
+                        <li><strong>Vice President</strong> <span class="service-detail">2022.03 – 2022.07</span></li>
+                        <li><strong>Administrator</strong> <span class="service-detail">2022.09 – 2022.12</span></li>
+                        <li><strong>Design Committee</strong> <span class="service-detail">2020.09 – 2020.12</span></li>
+                        <li><strong>Study Mentor</strong> (C, Python, Data Analysis, Web Crawling, LLM) <span class="service-detail">2021.03 – 2023.07</span></li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
     </div>
 
-    <div class="profile-container">
-        <div class="profile-picture">
-            <img id="profile-img" src="./src/Profile_1.jpeg" alt="Profile Picture">
-            <div class="dots-container">
-                <span class="dot" onclick="changeSlide(1)"></span>
-                <span class="dot" onclick="changeSlide(2)"></span>
-                <span class="dot" onclick="changeSlide(3)"></span>
-                <span class="dot" onclick="changeSlide(4)"></span>
-                <span class="dot" onclick="changeSlide(5)"></span>
-            </div>
-        </div>
-        <div class="profile-details">
-            <h2>Kyoungwhan Mheen</h2>
-            <p>M.S. Student in <a href="https://hcitech.org/index.html">HCI Tech Lab</a> at KAIST</p>
-            <p>Hello, I am a master's student in <a href="https://hcitech.org/index.html">Human-Centered Interactive Technologies Laboratory</a> at the <a href="https://ct.kaist.ac.kr/">Graduate School of Culture Technology, KAIST</a> under the supervision of Prof. <a href="https://sanghoy.com/">Sang ho Yoon</a>.</p>
-            <p>My research interest lie in gaze-based behavior and gaze-hand multimodal interaction. I am particularly fascinated by how eye movements can be used to anticipate user intentions and enhance interactive systems.</p>
-            <div class="white-href">
-                <a href="#contact" class="contact-button">Contact</a>
-            </div>
-        </div>
-        
-    </div>
-    <hr class="divider">
-    <div class="content">
-        <h2 id="education">Education</h2>
-        <div class="education-item">
-            <div class="education-image">
-                <img src="./src/kaist_logo.png" alt="Education Image 1">
-            </div>
-            <div class="education-text">
-                <h3>Korea Advanced Institute of Science and Technology</h3>
-                <p><strong><span class="education-period">2024 - Present</span></strong></p>
-                <p>Graduate School of Culture Technology M.S.</p>
-            </div>
-        </div>
-        <div class="education-item">
-            <div class="education-image">
-                <img src="./src/hyu_logo.png" alt="Education Image 2">
-            </div>
-            <div class="education-text">
-                <h3>Hanyang University</h3>
-                <p><strong><span class="education-period">2020 - 2023</span></strong></p>
-                <p>Information Systems B.S</p>
-            </div>
-        </div>
-    </div>
-    <hr class="divider">
-    <div class="content">
-        <h2 id="publications">Publications</h2>
-        <div class="publication-item">
-            <div class="publication-text">
-                <h3>Automatic Preparatory Object Rotation Interaction using Gaze Data in Virtual Reality</h3>
-                <p><strong><span class="publication-authors">Kyoungwhan Mheen (KAIST), Min-yung Kim (KAIST), Jina Kim (KAIST), Sang Ho Yoon* (KAIST)</span></strong></p>
-                <p><span class="publication-venue">[Korea Computer Congress (KCC) 2024]</span></p>
-            </div>
-        </div>
-        <div class="publication-item">
-            <div class="publication-text">
-                <h3 class="korean-text">Worki-Yo: AR-Driven Stretching in Office System for Workplace Health</h3>
-                <p><strong><span class="publication-authors">Kyoungwhan Mheen, Heejeong Ko, Sungjae Choi, Sang Ho Yoon*</span></strong></p>
-                <p><span class="publication-venue">[HCI Korea 2025]</span></p>
-            </div>
-        </div>
-        <div class="publication-item">
-            <div class="publication-text">
-                <h3 class="korean-text">A Guidance System for Large-Scale Museum Exhibits by Integrating Wall Displays and Augmented Reality </h3>
-                <p><strong><span class="publication-authors">Hee Jeong Ko, Hyun Woo Kim, Kyoungwhan Mheen, Dooyoung Kim, Woontack Woo*</span></strong></p>
-                <p><span class="publication-venue">[HCI Korea 2025]</span></p>
-            </div>
-        </div>
-    </div>
-    <hr class="divider">
-    <div class="content">
-        <h2 id="prizes">Prizes</h2>
-        <div class="prize-item">
-            <div class="prize-text">
-                <h3>Best Presentation Award</h3>
-                <p><strong><span class="publication-authors">HMD-Based Trajectory Extraction for Seated Arm Stretching Based on Linear and Angular Trajectory Classification</span></strong></p>
-                <p><span class="publication-venue">[Korea Computer Graphics Society (KCGS) 2025]</span></p>
-            </div>
-        </div>
-    </div>
-    <hr class="divider">
-    <div class="content">
-        <h2 id="projects">Projects</h2>
-        <div class="project-item">
-            <div class="project-text">
-                <h3>What-if: Immersive fairy tale in re-imagined space</h3>
-                <p><strong><span class="career-period">GCT501 Culture Technology|2024 Spring|Kyoungwhan Mheen, Kangeun Lee, Hyungwoo Jin, Danbinaerin Han</span></strong></p>
-            </div>
-            <div class="project-slide">
-                <img src="./src/501_Whatif_Thumbnail.jpg" alt="Education Image 2">
-            </div>
-        </div>
+    <footer class="footer">
+        <p>&copy; 2025 Kyoungwhan Mheen. All Rights Reserved.</p>
+    </footer>
 
-        <div class="project-item">
-            <div class="project-text">
-                <h3>PreGraspHelper : Virtual Objects Preparatory Manipulation for Grasping</h3>
-                <p><strong><span class="career-period">GCT623 Interaction Sensing Principle & Application|2024 Spring|Kyoungwhan Mheen, Min-yung Kim</span></strong></p>
-            </div>
-            <div class="project-slide">
-                <img src="./src/Frame 102.png" alt="Education Image 2">
-            </div>
-        </div>
-
-        <div class="project-item">
-            <div class="project-text">
-                <h3>Worki-Yo : Improved Stretching accessibility for Office Worker Using Immersive Augment Reality</h3>
-                <p><strong><span class="career-period">CTP445 Augmented Reality|2024 Spring|KAIST</span></strong></p>
-            </div>
-            <div class="project-slide">
-                <img src="./src/Frame 11.png" alt="Education Image 2">
-            </div>
-        </div>
-
-        <div class="project-item">
-            <div class="project-text">
-                <h3>PeeKaBoo! - Personalized Emotional Evaluation Kernel Adjusted by Biofeedback-Optimized Observation</h3>
-                <p><strong><span class="career-period">GCT565 Augmented Humans|2025 Autumn|KwangBin Lee, Jihun Chae</span></strong></p>
-            </div>
-            <div class="project-slide">
-                <img src="./src/HomePageTeaser.png" alt="Education Image 3">
-            </div>
-        </div>
-
-        <div class="project-item">
-            <div class="project-text">
-                <h3>Flace: Framing Spaces for Seamless Collaboration in Meta-Museum</h3>
-                <p><strong><span class="career-period">GCT550 Augmented Reality|2025 Autumn|Hee Jeong Ko, Hyun Woo Kim</span></strong></p>
-            </div>
-            <div class="project-slide">
-                <img src="./src/Flace_Teaser.png" alt="Education Image 4">
-            </div>
-        </div>
-    </div>
-    <hr class="divider">
-    <div class="content">
-        <h2 id="career">Career</h2>
-        <div class="career-item">
-            <div class="career-text">
-                <h3>AlphaMind <i>[Under Develop]</i></h3>
-                <p><strong><span class="career-period">2023.01.01.~ Present (CEO, Frontend/Backend Developer)</span></strong></p>
-                <p>Crypto Aggregation &  Algorithm Trading(<a href="https://moneypin.biz/bizno/detail/3418802867/">Co. MK Associates</a>)</p>
-            </div>
-        </div>
-        <div class="career-item">
-            <div class="career-text">
-                <h3>Research Assistant</h3>
-                <p><strong><span class="career-period">2023.03.01. ~ 2023.07.31.</span></strong></p>
-                <p>Under the supervision of <a href="https://github.com/youngjoonwon">Prof. Youngjoon Won</a>, <br>Blockchain Application Research (NFT Transaction Anlz.)</p>
-            </div>
-        </div>
-        <div class="career-item">
-            <div class="career-text">
-                <h3>Intelligent Robotics Research Center, KIST</h3>
-                <p><strong><span class="career-period">2022.06.22. ~ 2022.08.31.</span></strong></p>
-                <p>Under the supervision of <a href="https://scholar.google.co.uk/citations?user=xlNXvLEAAAAJ&hl=en&oi=ao">Dr. Lim Yoonseob</a></p>
-            </div>
-        </div>
-    </div>
-    <hr class="divider">
-    <div class="content">
-        <h2 id="extra-curricular">Extra-Curricular Activities</h2>
-        <br>
-        <div class="extra-item">
-            <div class="extra-text">
-                <h3>6th President of <a href="https://forif.org/">FORIF</a> (HYU Academic Division Central SW Club)</h3>
-                <p><strong><span class="extra-period1">2021.03.01. ~ 2021.12.31.</span></strong></p>
-                <p>FORIF Design Committe <strong><span class="extra-period">(2020.09.01. ~ 2020.12.31.)</span></strong></p>
-                <p>FORIF Vice President <strong><span class="extra-period">(2022.03.01. ~ 2022.07.31.)</span></strong></p>
-                <p>FORIF Administrator <strong><span class="extra-period">(2022.09.01. ~ 2022.12.31.)</span></strong></p>
-                <p>FORIF C, Python, Data Analysis, Web Crawling, LLM Study Mentor <strong><span class="extra-period">(2021.03.01.~2023.07.31.)</span></strong></p>
-                <p><span class="extra-footnote"><i>"My beloved club, where the heart of my university life truly resides"</i></span></p>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="extra-item">
-            <div class="extra-text">
-                <h3>🏆 SKT AI Curriculum (3rd Place, <a href="https://kwmheenhyu.notion.site/PharmaSEE-2ef8fcd094c840d0b5882295f3080181?pvs=74">Pharma-see</a>)</h3>
-                <p><strong><span class="extra-period1">2021.12.31. (AI Devloper, UI/UX Designer)</span></strong></p>
-                <p>Under the supervision of <a href="https://github.com/youngjoonwon">Prof. Youngjoon Won</a>, YOLO based Pill Recognition System</p>
-            </div>
-        </div>
-    </div>
-    <hr class="divider">
-    <div class="content" id="contact">
-        <h2 class="centered-heading">Contact</h2>
-        <div class="contact-container">
-            <div class="contact-item">
-                <strong>GitHub</strong>
-                <p><a href="https://github.com/kwmheen">@kwmheen</a></p>
-            </div>
-            <div class="contact-item">
-                <strong>Email</strong>
-                <p><a href="mailto:kwmheen@kaist.ac.kr">kwmheen@kaist.ac.kr</a></p>
-            </div>
-            <div class="contact-item">
-                <strong>LinkedIn</strong>
-                <p><a href="https://www.linkedin.com/in/kyoungwhan-mheen-281361276/">kwmheen</a></p>
-            </div>
-            <div class="contact-item">
-                <strong>Phone</strong>
-                <p><a href="tel:+821099951051">010-9995-1051</a></p>
-            </div>
-            <div class="contact-item">
-                <strong>Address</strong>
-                <p><a href="https://g.co/kgs/YEBtSJD">NS building, 291, Daehak-ro,<br>Yuseong-gu, Daejeon,<br>Republic of Korea (34141)</a></p>
-            </div>
-            <div class="contact-item">
-                <strong>Instagram</strong>
-                <p><a href="https://www.instagram.com/kwmheen/">@kwmheen</a></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>© 2024 Kyoungwhan Mheen. All Rights Reserved.</p>
-    </div>
     <script>
         var currentSlide = 1;
-        var totalSlides = 5;
 
         function changeSlide(slideIndex) {
             currentSlide = slideIndex;
-            document.getElementById("profile-img").src = `./src/Profile_${slideIndex}.jpeg`;
+            document.getElementById('profile-img').src = './src/Profile_' + slideIndex + '.jpeg';
             updateDots();
         }
 
         function updateDots() {
-            var dots = document.getElementsByClassName("dot");
+            var dots = document.getElementsByClassName('dot');
             for (var i = 0; i < dots.length; i++) {
-                dots[i].style.backgroundColor = i === currentSlide - 1 ? "#0066FF" : "#ccc";
+                dots[i].classList.toggle('active', i === currentSlide - 1);
             }
         }
 
-        // Initialize the first dot as active
         updateDots();
     </script>
 
