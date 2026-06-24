@@ -93,13 +93,12 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="subtitle has-text-centered placeholder-text">
-          Teaser description will be added here.
+          UniScale — a gaze-pinch XR scaling system that frees the dominant hand, tested across six techniques and two clutching conditions.
         </h2>
         <div class="columns is-centered">
           <div class="column is-10">
-            <div class="placeholder-box teaser">
-              <i class="fas fa-photo-video"></i>
-              Teaser video / image will be added here.
+            <div class="teaser-image-wrapper" style="display: flex; justify-content: center;">
+              <img src="../../src/uniScaleTeaser.png" alt="UniScale Teaser" class="center-image" style="max-width: 130%;" loading="eager" />
             </div>
           </div>
         </div>
@@ -128,18 +127,51 @@
   </section>
 
   <!-- Model / Method diagram -->
-  <section class="section">
+  <section class="section method-overview-section">
     <div class="container is-max-desktop">
-      <div class="columns is-four-fifths">
-        <div class="placeholder-box" style="width: 100%; min-height: 280px;">
-          <i class="fas fa-image"></i>
-          Figure / diagram will be added here.
+      <div class="method-overview-block">
+        <div class="method-carousel" id="method-carousel">
+          <button class="carousel-btn carousel-prev" type="button" aria-label="Previous method">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div class="carousel-main">
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <div class="carousel-slide is-active">
+                  <img src="../../src/uniScaleMethod1.png" alt="UniScale Method 1" class="has-shadow">
+                </div>
+                <div class="carousel-slide">
+                  <img src="../../src/uniScaleMethod2.png" alt="UniScale Method 2" class="has-shadow">
+                </div>
+                <div class="carousel-slide">
+                  <img src="../../src/uniScaleMethod3.png" alt="UniScale Method 3" class="has-shadow">
+                </div>
+                <div class="carousel-slide">
+                  <img src="../../src/uniScaleMethod4.png" alt="UniScale Method 4" class="has-shadow">
+                </div>
+                <div class="carousel-slide">
+                  <img src="../../src/uniScaleMethod5.png" alt="UniScale Method 5" class="has-shadow">
+                </div>
+                <div class="carousel-slide">
+                  <img src="../../src/uniScaleMethod6.png" alt="UniScale Method 6" class="has-shadow">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-indicator">
+              <span class="carousel-counter"><span id="carousel-current">1</span> / 6</span>
+            </div>
+          </div>
+
+          <button class="carousel-btn carousel-next" type="button" aria-label="Next method">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
 
-        <h2 class="title is-3">Method Overview</h2>
-        <div class="content">
-          <p class="placeholder-text">Description will be added here.</p>
-          <p class="placeholder-text">Additional details will be added here.</p>
+        <h2 class="title is-3 method-overview-title">Method Overview</h2>
+        <div class="content method-overview-content">
+          <p class="placeholder-text">Gaze selects the target, then NDH pinch gestures control scaling — freeing the DH for concurrent tasks — across five techniques in clutching and clutch-free modes.</p>
+          <p class="placeholder-text">Six gaze+pinch scaling techniques shown across Initial State → Mode Activation → Scale Manipulation → Confirmation, categorized into Pinch-based (uniDepth, uniAngle), Micro Gesture (uniMicro), Finger-based (uniSemi, biSemi), and Bimanual baseline (biDistance), with clutching and clutch-free conditions indicated.</p>
 
           <div class="learn-more-container" style="margin-top: 2rem;">
             <div style="margin-bottom: 1rem;">
@@ -160,39 +192,18 @@
     </div>
   </section>
 
-  <!-- Two-column: text + media -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <div class="columns is-vcentered">
-        <div class="column is-half">
-          <h2 class="title is-3">System / UI</h2>
-          <div class="content">
-            <p class="placeholder-text">Description will be added here.</p>
-          </div>
-        </div>
-        <div class="column is-half">
-          <div class="placeholder-box video">
-            <i class="fas fa-play-circle"></i>
-            Video will be added here.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Two-column: media + text -->
+  <!-- Application Scenarios -->
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-vcentered">
         <div class="column is-half">
-          <div class="placeholder-box video">
-            <i class="fas fa-play-circle"></i>
-            Video will be added here.
-          </div>
+          <video autoplay controls muted loop playsinline width="100%" class="has-shadow" style="border-radius: 8px;">
+            <source src="../../src/uniScaleMap.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="column is-half">
           <h2 class="title is-3">Application Scenarios</h2>
-          <p class="placeholder-text">Description will be added here.</p>
+          <p class="placeholder-text">A gaze-driven navigation scenario set on the KAIST campus, where users explore a 3D map using only eye movements and pinch gestures — no controller required. Gaze selects buildings and points of interest, while unimanual scaling lets users zoom in and out without interrupting their dominant hand.</p>
         </div>
       </div>
     </div>
@@ -284,6 +295,41 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var carousel = document.getElementById('method-carousel');
+      if (!carousel) return;
+
+      var slides = carousel.querySelectorAll('.carousel-slide');
+      var prevBtn = carousel.querySelector('.carousel-prev');
+      var nextBtn = carousel.querySelector('.carousel-next');
+      var counter = document.getElementById('carousel-current');
+      var current = 0;
+      var total = slides.length;
+
+      function showSlide(index) {
+        current = (index + total) % total;
+        slides.forEach(function (slide, i) {
+          slide.classList.toggle('is-active', i === current);
+        });
+        if (counter) counter.textContent = String(current + 1);
+      }
+
+      prevBtn.addEventListener('click', function () {
+        showSlide(current - 1);
+      });
+
+      nextBtn.addEventListener('click', function () {
+        showSlide(current + 1);
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') showSlide(current - 1);
+        if (e.key === 'ArrowRight') showSlide(current + 1);
+      });
+    })();
+  </script>
 
 </body>
 </html>
