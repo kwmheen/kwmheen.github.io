@@ -329,6 +329,48 @@
         if (e.key === 'ArrowRight') showSlide(current + 1);
       });
     })();
+
+    (function () {
+      var egg = document.querySelector('.uniscale-easter-egg');
+      if (!egg) return;
+
+      var noHover = window.matchMedia('(hover: none)');
+      var ANIM_MS = 450;
+      var INTERVAL_MS = 2000;
+      var intervalId = null;
+
+      function playScale() {
+        egg.classList.add('is-scaling');
+        setTimeout(function () {
+          egg.classList.remove('is-scaling');
+        }, ANIM_MS);
+      }
+
+      function startLoop() {
+        playScale();
+        return setInterval(playScale, INTERVAL_MS);
+      }
+
+      function stopLoop() {
+        if (intervalId !== null) {
+          clearInterval(intervalId);
+          intervalId = null;
+        }
+        egg.classList.remove('is-scaling');
+      }
+
+      if (noHover.matches) {
+        intervalId = startLoop();
+      }
+
+      noHover.addEventListener('change', function (e) {
+        if (e.matches) {
+          intervalId = startLoop();
+        } else {
+          stopLoop();
+        }
+      });
+    })();
   </script>
 
 </body>

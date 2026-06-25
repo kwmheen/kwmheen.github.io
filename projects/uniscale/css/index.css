@@ -64,11 +64,21 @@ body {
   transform-origin: right center;
 }
 
-.uniscale-easter-egg:hover .uniscale-text {
+@media (hover: hover) {
+  .uniscale-easter-egg:hover .uniscale-text {
+    transform: scale(0.62);
+  }
+
+  .uniscale-easter-egg:hover .uniscale-wave {
+    transform: translateX(-1.25em);
+  }
+}
+
+.uniscale-easter-egg.is-scaling .uniscale-text {
   transform: scale(0.62);
 }
 
-.uniscale-easter-egg:hover .uniscale-wave {
+.uniscale-easter-egg.is-scaling .uniscale-wave {
   transform: translateX(-1.25em);
 }
 
