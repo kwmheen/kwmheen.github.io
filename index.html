@@ -15,21 +15,26 @@
     <nav class="navbar">
         <div class="navbar-inner">
             <a href="#" class="navbar-brand">Kyoungwhan Mheen 👀</a>
-            <ul class="navbar-nav">
-                <li><a href="#news">News</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#services">Services</a></li>
-            </ul>
+            <div class="navbar-right">
+                <ul class="navbar-nav">
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+                <div class="navbar-profile-img-wrapper" id="navbar-profile-img-wrapper">
+                    <img id="navbar-profile-img" src="./src/Profile_1 3.png" alt="Kyoungwhan Mheen" data-default="./src/Profile_1 3.png" data-hover="./src/Profile_1 4.png">
+                </div>
+            </div>
         </div>
     </nav>
 
     <div class="page-layout">
         <aside class="sidebar">
-            <div class="profile-card">
+            <div class="profile-card" id="profile-card">
                 <div class="profile-img-wrapper" id="profile-img-wrapper">
                     <img id="profile-img" src="./src/Profile_1 3.png" alt="Kyoungwhan Mheen" data-default="./src/Profile_1 3.png" data-hover="./src/Profile_1 4.png">
                 </div>
@@ -288,25 +293,35 @@
 
     <script>
         (function () {
-            var wrapper = document.getElementById('profile-img-wrapper');
-            var img = document.getElementById('profile-img');
-            var defaultSrc = img.dataset.default;
-            var hoverSrc = img.dataset.hover;
+            var profileCard = document.getElementById('profile-card');
+            var navbarProfileWrapper = document.getElementById('navbar-profile-img-wrapper');
+            var profileImg = document.getElementById('profile-img');
+            var navbarProfileImg = document.getElementById('navbar-profile-img');
+
+            var imgs = [profileImg, navbarProfileImg].filter(Boolean);
+            if (!imgs.length) return;
+
+            var defaultSrc = imgs[0].dataset.default;
+            var hoverSrc = imgs[0].dataset.hover;
             var scrollThreshold = 5;
             var hoverMedia = window.matchMedia('(hover: hover) and (pointer: fine)');
-            var showingHover = false;
+            var hoverCount = 0;
 
             function setHoverImage() {
-                if (!showingHover) {
-                    img.src = hoverSrc;
-                    showingHover = true;
+                hoverCount += 1;
+                if (hoverCount === 1) {
+                    imgs.forEach(function (img) {
+                        img.src = hoverSrc;
+                    });
                 }
             }
 
             function setDefaultImage() {
-                if (showingHover) {
-                    img.src = defaultSrc;
-                    showingHover = false;
+                hoverCount = Math.max(0, hoverCount - 1);
+                if (hoverCount === 0) {
+                    imgs.forEach(function (img) {
+                        img.src = defaultSrc;
+                    });
                 }
             }
 
@@ -320,8 +335,10 @@
 
             function bindInteractions() {
                 if (hoverMedia.matches) {
-                    wrapper.addEventListener('mouseenter', setHoverImage);
-                    wrapper.addEventListener('mouseleave', setDefaultImage);
+                    if (profileCard) {
+                        profileCard.addEventListener('mouseenter', setHoverImage);
+                        profileCard.addEventListener('mouseleave', setDefaultImage);
+                    }
                 } else {
                     window.addEventListener('scroll', onScroll, { passive: true });
                     onScroll();
