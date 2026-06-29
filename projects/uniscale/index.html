@@ -139,27 +139,21 @@
             <div class="carousel-viewport">
               <div class="carousel-track">
                 <div class="carousel-slide is-active">
-                  <img src="../../src/uniScaleMethod1.png" alt="UniScale Method 1" class="has-shadow">
+                  <img src="../../src/Method01.png" alt="UniScale Method 01" class="has-shadow">
                 </div>
                 <div class="carousel-slide">
-                  <img src="../../src/uniScaleMethod2.png" alt="UniScale Method 2" class="has-shadow">
+                  <img src="../../src/Method02.png" alt="UniScale Method 02" class="has-shadow">
                 </div>
                 <div class="carousel-slide">
-                  <img src="../../src/uniScaleMethod3.png" alt="UniScale Method 3" class="has-shadow">
+                  <img src="../../src/Method03.png" alt="UniScale Method 03" class="has-shadow">
                 </div>
                 <div class="carousel-slide">
-                  <img src="../../src/uniScaleMethod4.png" alt="UniScale Method 4" class="has-shadow">
-                </div>
-                <div class="carousel-slide">
-                  <img src="../../src/uniScaleMethod5.png" alt="UniScale Method 5" class="has-shadow">
-                </div>
-                <div class="carousel-slide">
-                  <img src="../../src/uniScaleMethod6.png" alt="UniScale Method 6" class="has-shadow">
+                  <img src="../../src/Method04.png" alt="UniScale Method 04" class="has-shadow">
                 </div>
               </div>
             </div>
             <div class="carousel-indicator">
-              <span class="carousel-counter"><span id="carousel-current">1</span> / 6</span>
+              <span class="carousel-counter"><span class="carousel-counter-current">1</span> / 4</span>
             </div>
           </div>
 
@@ -187,6 +181,44 @@
               </a>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Result -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="method-overview-block">
+        <div class="method-carousel" id="result-carousel">
+          <button class="carousel-btn carousel-prev" type="button" aria-label="Previous result">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div class="carousel-main">
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <div class="carousel-slide is-active">
+                  <img src="../../src/Result01.png" alt="UniScale Result 01" class="has-shadow">
+                </div>
+                <div class="carousel-slide">
+                  <img src="../../src/Result02.png" alt="UniScale Result 02" class="has-shadow">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-indicator">
+              <span class="carousel-counter"><span class="carousel-counter-current">1</span> / 2</span>
+            </div>
+          </div>
+
+          <button class="carousel-btn carousel-next" type="button" aria-label="Next result">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <h2 class="title is-3 method-overview-title">Result</h2>
+        <div class="content method-overview-content">
+          <p class="placeholder-text">In a user study evaluating six scaling techniques under clutching and clutch-free conditions, bimanual scaling relied on clutching for stable control, while unimanual techniques excelled in clutch-free conditions and significantly reduced physical hand movement.</p>
         </div>
       </div>
     </div>
@@ -298,35 +330,35 @@
 
   <script>
     (function () {
-      var carousel = document.getElementById('method-carousel');
-      if (!carousel) return;
+      document.querySelectorAll('.method-carousel').forEach(function (carousel) {
+        var slides = carousel.querySelectorAll('.carousel-slide');
+        var prevBtn = carousel.querySelector('.carousel-prev');
+        var nextBtn = carousel.querySelector('.carousel-next');
+        var counter = carousel.querySelector('.carousel-counter-current');
+        var current = 0;
+        var total = slides.length;
 
-      var slides = carousel.querySelectorAll('.carousel-slide');
-      var prevBtn = carousel.querySelector('.carousel-prev');
-      var nextBtn = carousel.querySelector('.carousel-next');
-      var counter = document.getElementById('carousel-current');
-      var current = 0;
-      var total = slides.length;
+        function showSlide(index) {
+          current = (index + total) % total;
+          slides.forEach(function (slide, i) {
+            slide.classList.toggle('is-active', i === current);
+          });
+          if (counter) counter.textContent = String(current + 1);
+        }
 
-      function showSlide(index) {
-        current = (index + total) % total;
-        slides.forEach(function (slide, i) {
-          slide.classList.toggle('is-active', i === current);
+        prevBtn.addEventListener('click', function () {
+          showSlide(current - 1);
         });
-        if (counter) counter.textContent = String(current + 1);
-      }
 
-      prevBtn.addEventListener('click', function () {
-        showSlide(current - 1);
-      });
+        nextBtn.addEventListener('click', function () {
+          showSlide(current + 1);
+        });
 
-      nextBtn.addEventListener('click', function () {
-        showSlide(current + 1);
-      });
-
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowLeft') showSlide(current - 1);
-        if (e.key === 'ArrowRight') showSlide(current + 1);
+        carousel.setAttribute('tabindex', '0');
+        carousel.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowLeft') showSlide(current - 1);
+          if (e.key === 'ArrowRight') showSlide(current + 1);
+        });
       });
     })();
 
@@ -334,10 +366,8 @@
       var egg = document.querySelector('.uniscale-easter-egg');
       if (!egg) return;
 
-      var noHover = window.matchMedia('(hover: none)');
       var ANIM_MS = 450;
-      var INTERVAL_MS = 2000;
-      var intervalId = null;
+      var INTERVAL_MS = 30000;
 
       function playScale() {
         egg.classList.add('is-scaling');
@@ -346,30 +376,8 @@
         }, ANIM_MS);
       }
 
-      function startLoop() {
-        playScale();
-        return setInterval(playScale, INTERVAL_MS);
-      }
-
-      function stopLoop() {
-        if (intervalId !== null) {
-          clearInterval(intervalId);
-          intervalId = null;
-        }
-        egg.classList.remove('is-scaling');
-      }
-
-      if (noHover.matches) {
-        intervalId = startLoop();
-      }
-
-      noHover.addEventListener('change', function (e) {
-        if (e.matches) {
-          intervalId = startLoop();
-        } else {
-          stopLoop();
-        }
-      });
+      playScale();
+      setInterval(playScale, INTERVAL_MS);
     })();
   </script>
 
