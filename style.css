@@ -319,6 +319,21 @@ a:hover {
 }
 
 /* News timeline */
+.news-year-group {
+    margin-bottom: 28px;
+}
+
+.news-year-group:last-child {
+    margin-bottom: 0;
+}
+
+.news-year {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
 .news-timeline {
     list-style: none;
     border-left: 2px solid rgba(42, 82, 190, 0.2);
@@ -328,7 +343,11 @@ a:hover {
 
 .news-item {
     position: relative;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+}
+
+.news-item:last-child {
+    margin-bottom: 0;
 }
 
 .news-item::before {
@@ -340,13 +359,6 @@ a:hover {
     height: 12px;
     border-radius: 50%;
     background-color: var(--color-primary);
-}
-
-.news-date {
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: var(--color-muted);
-    margin-bottom: 4px;
 }
 
 .news-content {
