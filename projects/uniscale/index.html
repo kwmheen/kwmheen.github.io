@@ -44,13 +44,14 @@
               <span class="uniscale-text">UniScale</span><span class="uniscale-wave" aria-hidden="true">👋</span>
             </h1>
             <h1 class="title is-3 publication-title">
-              <span class="placeholder-text">Exploring Unimanual Gesture Mapping Strategies for Gaze+Pinch-based Scaling Interaction (ISMAR'26)</span>
+              <span class="placeholder-text">Exploring Unimanual Gesture Mapping Strategies for Gaze+Pinch-based Scaling Interaction (<a href="https://www.ieeeismar.net/2026/" target="_blank" rel="noopener">ISMAR'26</a>)</span>
             </h1>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Kyoungwhan Mheen,</span>
+              <span class="author-block"><a href="https://kwmheen.github.io/" target="_blank" rel="noopener">Kyoungwhan Mheen</a>,</span>
               <span class="author-block"><a href="http://www.jinwook.me/" target="_blank" rel="noopener">Jinwook Kim<small><sup>†</sup></small>,</a></span>
               <span class="author-block"><a href="https://sanghoy.com/" target="_blank" rel="noopener">Sang Ho Yoon<small><sup>†</sup></small></a></span>
+      
             </div>
 
             <div class="is-size-5 publication-authors">
@@ -70,7 +71,7 @@
                 <span class="link-block">
                   <a href="#" class="external-link button is-normal is-rounded is-dark is-disabled-link">
                     <span class="icon"><i class="fab fa-github"></i></span>
-                    <span>Github</span>
+                    <span>GitHub</span>
                   </a>
                 </span>
 
@@ -115,12 +116,6 @@
           <div class="content has-text-justified">
             <p class="placeholder-text">Object scaling serves as a fundamental spatial manipulation that enables complex and productive tasks in XR environments. This paper investigates unimanual scaling techniques for XR using gaze and hand interactions. We propose UniScale, a set of unimanual alternatives to the standard bimanual pinch, allowing users to scale objects while preserving hand availability for concurrent spatial manipulations. We design five distinct mapping strategies based on physical metaphors, exploring unimanual control that varies depth, angle, micro-gestures, and finger-distance input. We then compare these techniques against a standard bimanual baseline, in which users adjust the inter-hand distance via a bimanual pinch gesture. In a user study, we evaluate their effectiveness in a 3D object scaling task under both clutching and clutching-free conditions. The results indicate that while bimanual scaling relies on clutching for stable control, unimanual techniques excel in clutching-free conditions, significantly reducing physical hand movement. From the results, we derive valuable design implications for developing efficient 3D multimodal interactions in XR.</p>
           </div>
-          <div class="learn-more-container" style="margin-top: 20px;">
-            <a href="#" class="button is-info is-rounded is-light is-disabled-link">
-              <span class="icon"><i class="fas fa-arrow-right"></i></span>
-              <span>Learn more about UniScale</span>
-            </a>
-          </div>
         </div>
       </div>
     </div>
@@ -130,6 +125,12 @@
   <section class="section method-overview-section">
     <div class="container is-max-desktop">
       <div class="method-overview-block">
+        <h2 class="title is-3 method-overview-title">Method Overview</h2>
+        <div class="content method-overview-content">
+          <p class="placeholder-text">Gaze selects the target, then NDH pinch gestures control scaling — freeing the DH for concurrent tasks — across five techniques in clutching and clutch-free modes.</p>
+          <p class="placeholder-text">Six gaze+pinch scaling techniques shown across Initial State → Mode Activation → Scale Manipulation → Confirmation, categorized into Pinch-based (uniDepth, uniAngle), Micro Gesture (uniMicro), Finger-based (uniSemi, biSemi), and Bimanual baseline (biDistance), with clutching and clutch-free conditions indicated.</p>
+        </div>
+
         <div class="method-carousel" id="method-carousel">
           <button class="carousel-btn carousel-prev" type="button" aria-label="Previous method">
             <i class="fas fa-chevron-left"></i>
@@ -161,27 +162,6 @@
             <i class="fas fa-chevron-right"></i>
           </button>
         </div>
-
-        <h2 class="title is-3 method-overview-title">Method Overview</h2>
-        <div class="content method-overview-content">
-          <p class="placeholder-text">Gaze selects the target, then NDH pinch gestures control scaling — freeing the DH for concurrent tasks — across five techniques in clutching and clutch-free modes.</p>
-          <p class="placeholder-text">Six gaze+pinch scaling techniques shown across Initial State → Mode Activation → Scale Manipulation → Confirmation, categorized into Pinch-based (uniDepth, uniAngle), Micro Gesture (uniMicro), Finger-based (uniSemi, biSemi), and Bimanual baseline (biDistance), with clutching and clutch-free conditions indicated.</p>
-
-          <div class="learn-more-container" style="margin-top: 2rem;">
-            <div style="margin-bottom: 1rem;">
-              <a href="#" class="button is-info is-rounded is-light is-disabled-link">
-                <span class="icon"><i class="fas fa-arrow-right"></i></span>
-                <span>Learn more about technical details</span>
-              </a>
-            </div>
-            <div>
-              <a href="#" class="button is-info is-rounded is-light is-disabled-link">
-                <span class="icon"><i class="fas fa-arrow-right"></i></span>
-                <span>Learn more about datasets</span>
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -190,6 +170,11 @@
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="method-overview-block">
+        <h2 class="title is-3 method-overview-title">Result</h2>
+        <div class="content method-overview-content">
+          <p class="placeholder-text">In a user study evaluating six scaling techniques under clutching and clutch-free conditions, bimanual scaling relied on clutching for stable control, while unimanual techniques excelled in clutch-free conditions and significantly reduced physical hand movement.</p>
+        </div>
+
         <div class="method-carousel" id="result-carousel">
           <button class="carousel-btn carousel-prev" type="button" aria-label="Previous result">
             <i class="fas fa-chevron-left"></i>
@@ -214,11 +199,6 @@
           <button class="carousel-btn carousel-next" type="button" aria-label="Next result">
             <i class="fas fa-chevron-right"></i>
           </button>
-        </div>
-
-        <h2 class="title is-3 method-overview-title">Result</h2>
-        <div class="content method-overview-content">
-          <p class="placeholder-text">In a user study evaluating six scaling techniques under clutching and clutch-free conditions, bimanual scaling relied on clutching for stable control, while unimanual techniques excelled in clutch-free conditions and significantly reduced physical hand movement.</p>
         </div>
       </div>
     </div>
@@ -249,10 +229,9 @@
           <div class="column is-four-fifths">
             <h2 class="title is-3">Research Presentation</h2>
             <div class="publication-video">
-              <div class="placeholder-box video" style="position: absolute; inset: 0; border-radius: 10px;">
-                <i class="fab fa-youtube"></i>
-                Presentation video will be added here.
-              </div>
+              <video controls playsinline preload="metadata">
+                <source src="../../src/UniScaleVideoDemo.mp4" type="video/mp4">
+              </video>
             </div>
           </div>
         </div>
